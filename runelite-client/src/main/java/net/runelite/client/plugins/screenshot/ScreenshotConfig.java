@@ -158,7 +158,7 @@ public interface ScreenshotConfig extends Config
 		keyName = "duels",
 		name = "Screenshot Duels",
 		description = "Configures whether or not screenshots are automatically taken of the duel end screen.",
-		position = 11
+		position = 14
 	)
 	default boolean screenshotDuels()
 	{
@@ -191,10 +191,21 @@ public interface ScreenshotConfig extends Config
 		keyName = "hotkey",
 		name = "Screenshot hotkey",
 		description = "When you press this key a screenshot will be taken",
-		position = 14
+		position = 15
 	)
 	default Keybind hotkey()
 	{
 		return Keybind.NOT_SET;
+	}
+
+	@ConfigItem(
+		keyName = "friendDeath",
+		name = "Screenshot Friends Deaths",
+		description = "Configures whether or not screenshots are automatically taken when a clanmate or a friend near you dies.",
+		position = 11
+	)
+	default boolean screenshotFriendDeath()
+	{
+		return false;
 	}
 }
